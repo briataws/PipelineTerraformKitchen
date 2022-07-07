@@ -55,12 +55,12 @@ the `Jenkinsfile`:
 
 This pipeline follows a defined behavior and will perform the following workflow.
 
-#### Non Master Branch
+#### Non Main Branch
 
 This pipeline will execute Kitchen workflow, performing kitchen converge, kitchen verify and kitchen destroy.
 If the optional pipeline parameters `terraformDebugOutput` and `terraformDestroyTimeout` are present, this pipeline will retrieve the parameters and enhance debug level and set a timeout to execute Kitchen destroy.  If `terraformDebugOutput` is not present it will not provide enhanced debugging log.  If `terraformDestroyTimeout` is not present it will default to 30 minutes timeout to execute Kitchen destroy.
 
-#### Master Branch
+#### Main Branch
 
 This pipeline will execute Kitchen workflow, performing kitchen converge, kitchen verify and kitchen destroy.
 If the optional pipeline parameters `terraformDebugOutput` and `terraformDestroyTimeout` are present, this pipeline will retrieve the parameters and enhance debug level and set a timeout to execute Kitchen destroy.  If `terraformDebugOutput` is not present it will not provide enhanced debugging log.  If `terraformDestroyTimeout` is not present it will default to 30 minutes timeout to execute Kitchen destroy.
