@@ -2,9 +2,7 @@ def call(Map pipelineParams) {
 
   pipeline {
     agent {
-      ecs {
-          inheritFrom 'ecs'
-          image 'bcarpio/terraform-jnlp-slave'
+      label 'ecs'
       }
     }
 
