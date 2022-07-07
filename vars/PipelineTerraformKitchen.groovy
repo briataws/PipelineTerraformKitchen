@@ -12,8 +12,11 @@ def call(Map pipelineParams) {
 
   pipeline {
     agent {
-      label 'ecs'
+      ecs {
+        inheritFrom 'ecs'
+        image 'bcarpio/terraform-jnlp-slave'
       }
+    }
 
     environment {
       AWS_DEFAULT_REGION = "us-west-2"
