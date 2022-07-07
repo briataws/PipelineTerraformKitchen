@@ -4,7 +4,6 @@ def call(Map pipelineParams) {
     agent {
       label 'ecs'
       }
-    }
 
     environment {
       AWS_DEFAULT_REGION = "us-west-2"
