@@ -1,13 +1,13 @@
 def call(Map pipelineParams) {
 
   if(!pipelineParams) {
-     pipelineParams = [:]
-   }
+    pipelineParams = [:]
+  }
 
   node {
-  ¦ stage('Initialize') {
-  ¦ ¦ TERRAFORM_CONTAINER_INPUTS = env.TERRAFORM_CONTAINER_INPUTS?:''
-  ¦ }
+    stage('Initialize') {
+      TERRAFORM_CONTAINER_INPUTS = env.TERRAFORM_CONTAINER_INPUTS?:''
+    }
   }
 
   pipeline {
