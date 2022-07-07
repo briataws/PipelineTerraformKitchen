@@ -4,12 +4,6 @@ def call(Map pipelineParams) {
     pipelineParams = [:]
   }
 
-  node {
-    stage('Initialize') {
-      TERRAFORM_CONTAINER_INPUTS = env.TERRAFORM_CONTAINER_INPUTS?:''
-    }
-  }
-
   pipeline {
     agent {
       ecs {
