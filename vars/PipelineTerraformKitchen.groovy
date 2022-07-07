@@ -7,7 +7,7 @@ pipeline {
   }
 
   environment {
-    AWS_DEFAULT_REGION = "us-east-1"
+    AWS_DEFAULT_REGION = "us-west-2"
     TF_LOG = "${pipelineParams.terraformDebugOutput?:''}"
     DESTROY_TIMEOUT = "${pipelineParams.terraformDestroyTimeout ? pipelineParams.terraformDestroyTimeout : '30'}"
   }
