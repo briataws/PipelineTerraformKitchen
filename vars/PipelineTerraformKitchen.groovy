@@ -1,5 +1,15 @@
 def call(Map pipelineParams) {
 
+  if(!pipelineParams) {
+     pipelineParams = [:]
+   }
+
+  node {
+  ¦ stage('Initialize') {
+  ¦ ¦ TERRAFORM_CONTAINER_INPUTS = env.TERRAFORM_CONTAINER_INPUTS?:''
+  ¦ }
+  }
+
   pipeline {
     agent {
       label 'ecs'
