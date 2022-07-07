@@ -35,6 +35,7 @@ def call(Map pipelineParams) {
       stage('kitchen: verify') {
         steps {
           sshagent ([sshKey()]) {
+            sh 'sleep 120'
             sh 'terraform output --json > test/integration/default/files/terraform.json'
             sh 'kitchen verify'
           }
