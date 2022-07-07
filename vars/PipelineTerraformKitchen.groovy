@@ -82,8 +82,6 @@ def call(Map pipelineParams) {
       always {
         junit 'test/integration/default/junit/junit.xml'
         sh 'kitchen destroy'
-        deleteDir()
-        cleanWs()
       }
     }
   }
